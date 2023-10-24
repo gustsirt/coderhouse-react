@@ -1,0 +1,15 @@
+.contador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: auto;
+}
+.contador .controles {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.contador p {
+  color: black;
+}/*# sourceMappingURL=styles.css.map */

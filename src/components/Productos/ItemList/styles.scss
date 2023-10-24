@@ -1,0 +1,30 @@
+// ITEM LIST
+@import '../../variables';
+
+.itemList {
+  background-color: $ccla1;
+  width: 100%;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .cards {
+    width: 20%;
+    border: 3px solid $cosc7;
+    border-radius: 30px;
+    color: $cosc7;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      height: 30vh;
+    }
+  }
+}

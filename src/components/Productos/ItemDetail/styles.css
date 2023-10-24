@@ -1,0 +1,15 @@
+.itemDetail {
+  width: 40%;
+  border: 3px solid #504b36;
+  border-radius: 30px;
+  color: #504b36;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.itemDetail img {
+  max-width: 100%;
+  max-height: 350px;
+}/*# sourceMappingURL=styles.css.map */

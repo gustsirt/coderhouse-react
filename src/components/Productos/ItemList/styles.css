@@ -1,0 +1,25 @@
+.itemList {
+  background-color: #f4e7af;
+  width: 100%;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.itemList .cards {
+  width: 20%;
+  border: 3px solid #504b36;
+  border-radius: 30px;
+  color: #504b36;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.itemList .cards img {
+  max-width: 100%;
+  height: 30vh;
+}/*# sourceMappingURL=styles.css.map */

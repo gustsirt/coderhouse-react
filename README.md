@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Primera pre - entrega - Crea tu landing
+## Alumno: Sirtori Gustavo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+* Profesor: Everaldo Guevara
+* Comisión: 57980 --- React Js
+* Tutor: Franco David Garay
 
-In the project directory, you can run:
+---
+<h3 style="color: blue">TEMPLATE</h3>
 
-### `npm start`
+<h4 style="color: yellow">COMPONENTE: HYFJOUBERT -> Header y Footer Joubert</h4>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Es el componente donde se ubica el header y el footer
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*Respecto al HEADER contiene:*
+ - Titulo con link al inicio
+ - Titulo Variable, segun la ubicacion
+ - Un nav completo, con dropdown segun marcas o tipos
 
-### `npm test`
+*Respecto al Footer*
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ - No tiene nada especial, solo "acceso" a las redes sociales y un Copyright con año dinamico.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h3 style="color: orange">MANAEJO DE DATOS</h3>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h4 style="color: yellow">SERVICIO: FIREBASE</h4>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Se realizo segun lo especificado, se cambio el vencimiento del modo de prueba hasta 31/12/2023, modificando las reglas del mismo
 
-### `npm run eject`
+* La Carga de Datos Iniciales se realizo mediante en un componente Auxiliar (ver al final de esta documentación)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h3 style="color: green">PAGINAS (ROUTES)</h3>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<h4 style="color: yellow">COMPONENTE: PRODUCTOS (item List)</h4>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<h3 style="color: purple">ELEMENTOS AUXILIARES</h3>
+En una sitaución normal, todo ese contenido debería ser eliminado, sin embargo en mi manera de trabajar personal, suelo realizar copias de seguridad para trabajar cómodo conservando la copia en lo posible hasta momentos antes de que pase a produccion.
+NOTA: en una situacion de documetos muy grandes, solo conservaria lo util, el resto se descartaría.
 
-### Analyzing the Bundle Size
+<h4 style="color: yellow">COMPONENTE: COLORES</h4>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Se creo con el fin de tener una referencia de colores para elegor el mas adecado para cada ocacion
 
-### Making a Progressive Web App
+<h4 style="color: yellow">BOTON AGREGAR DATOS INICIALES (en Componente Colores)</h4>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Con el fin de no agregar los datos uno por uno, primero se crearon los documentos vacios en firestore obteniendo el ID de uno, y con esos datos se modificó la funcion colocandolos en un array que al ejecutarse actualiza los datos "masivamente"
+NOTA: se podria cambiar el ID de google por un ID "manual" creado masivamente.
 
-### Advanced Configuration
+<h4 style="color: yellow">FUNCIONES: handleProducts</h4>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este documento luego se reemplazo. Solo se conservan como back up de lo que se realizó

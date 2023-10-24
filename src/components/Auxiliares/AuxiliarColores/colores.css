@@ -1,0 +1,130 @@
+.colores {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  flex-wrap: wrap;
+}
+.colores div {
+  width: 200px;
+  height: 50px;
+}
+.colores .ccl1 {
+  background-color: #f4e7af;
+  color: black;
+}
+.colores .ccl2 {
+  background-color: #faf2cc;
+  color: black;
+}
+.colores .ccl3 {
+  background-color: #fefbec;
+  color: black;
+}
+.colores .ccl4 {
+  background-color: white;
+  color: black;
+}
+.colores .ccl5 {
+  background-color: white;
+  color: black;
+}
+.colores .ccl6 {
+  background-color: white;
+  color: black;
+}
+.colores .ccl7 {
+  background-color: white;
+  color: black;
+}
+.colores .ccl8 {
+  background-color: white;
+  color: black;
+}
+.colores .ccl9 {
+  background-color: white;
+  color: black;
+}
+.colores .ccl10 {
+  background-color: white;
+  color: black;
+}
+.colores .cos1 {
+  background-color: #e0cd7c;
+  color: white;
+}
+.colores .cos2 {
+  background-color: #d2be66;
+  color: white;
+}
+.colores .cos3 {
+  background-color: #c2ad52;
+  color: white;
+}
+.colores .cos4 {
+  background-color: #a99747;
+  color: white;
+}
+.colores .cos5 {
+  background-color: #897c44;
+  color: white;
+}
+.colores .cos6 {
+  background-color: #6b633e;
+  color: white;
+}
+.colores .cos7 {
+  background-color: #504b36;
+  color: white;
+}
+.colores .cos8 {
+  background-color: #37352b;
+  color: white;
+}
+.colores .cos9 {
+  background-color: #21201d;
+  color: white;
+}
+.colores .cos10 {
+  background-color: black;
+  color: white;
+}
+.colores .col {
+  background-color: #ebdb94;
+  color: black;
+}
+.colores .gri1 {
+  background-color: #f8f9fa;
+  color: black;
+}
+.colores .gri2 {
+  background-color: #e9ecef;
+  color: black;
+}
+.colores .gri3 {
+  background-color: #dee2e6;
+  color: black;
+}
+.colores .gri4 {
+  background-color: #ced4da;
+  color: black;
+}
+.colores .gri5 {
+  background-color: #adb5bd;
+  color: black;
+}
+.colores .gri6 {
+  background-color: #6c757d;
+  color: white;
+}
+.colores .gri7 {
+  background-color: #495057;
+  color: white;
+}
+.colores .gri8 {
+  background-color: #343a40;
+  color: white;
+}
+.colores .gri9 {
+  background-color: #212529;
+  color: white;
+}/*# sourceMappingURL=colores.css.map */

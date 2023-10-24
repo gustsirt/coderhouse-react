@@ -1,0 +1,20 @@
+@import '../../variables';
+
+.cartWidget{  
+  display: flex;
+  color: $color;
+  margin: 0 2em;
+
+  p{
+    padding: 0 10px;
+  }
+
+  a {
+    color: $color;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $color;
+    text-decoration: none;
+  }
+}
