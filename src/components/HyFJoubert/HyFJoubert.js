@@ -36,7 +36,7 @@ export default function HyFJoubert(props) {
       <header className="header">
 
         <Link to="/"><h1> Tienda Joubert {
-          locationBase == '/Marca' ? (<span className="h1extra"> . {location.pathname.split('/')[2]} </span>) : (
+          locationBase === '/Marca' ? (<span className="h1extra"> . {location.pathname.split('/')[2]} </span>) : (
             currentPagina ? (<span className="h1extra"> . {currentPagina.h1}</span>) : "")
         }</h1></Link>
 
@@ -48,17 +48,17 @@ export default function HyFJoubert(props) {
               <li className="despLi">
                 <button className="elementoDesplegable" onClick={setSubmenu1}>Marcas{submenu1 ? <BiCaretDown/>: <BiCaretRight/>}</button>
                 <ul className={"navAnidado " + (submenu1 ? "": "esconder")}>
-                  <li className="navLi"><NavLink to="/Marca/CarolinaHerrera">Estee Lauder</NavLink></li>
-                  <li className="navLi"><NavLink to="/Marca/JuanitaJo">Prune</NavLink></li>
-                  <li className="navLi"><NavLink to="/Marca/Ernesto">Ernesto</NavLink></li>
+                  <li className="navLi"><NavLink to="/Marca/CarolinaHerrera" onClick={setSubmenu1}>Carolina Herrera</NavLink></li>
+                  <li className="navLi"><NavLink to="/Marca/JuanitaJo" onClick={setSubmenu1}>Juanita Jo</NavLink></li>
+                  <li className="navLi"><NavLink to="/Marca/Ernesto" onClick={setSubmenu1}>Ernesto</NavLink></li>
                 </ul>
               </li>
               <li className="despLi">
                 <button className="elementoDesplegable" onClick={setSubmenu2}>Tipo{submenu2 ? <BiCaretDown/>: <BiCaretRight/>}</button>
                 <ul className={"navAnidado " + (submenu2 ? "": "esconder")}>
-                  <li className="navLi"><NavLink to="/Tipo/Bandolera">Bandolera</NavLink></li>
-                  <li className="navLi"><NavLink to="/Tipo/Bolso">Bolso</NavLink></li>
-                  <li className="navLi"><NavLink to="/Tipo/Cartera">Cartera</NavLink></li>
+                  <li className="navLi"><NavLink to="/Tipo/Bandolera" onClick={setSubmenu2}>Bandolera</NavLink></li>
+                  <li className="navLi"><NavLink to="/Tipo/Bolso" onClick={setSubmenu2}>Bolso</NavLink></li>
+                  <li className="navLi"><NavLink to="/Tipo/Cartera" onClick={setSubmenu2}>Cartera</NavLink></li>
                 </ul>
               </li>
               <li className="navLi"><NavLink to="/Colores">Colores</NavLink></li>

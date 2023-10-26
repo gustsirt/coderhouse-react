@@ -8,7 +8,7 @@ export const ContextCar = createContext({
 export const CarritoProvider = ({children}) => {
   const [carrito, setCarrito] = useState([])
 
-  console.log(carrito);
+  //console.log(carrito);
 
   const isInCarrito = (itemId) => {
     return carrito.some(prod => prod.id === itemId)
