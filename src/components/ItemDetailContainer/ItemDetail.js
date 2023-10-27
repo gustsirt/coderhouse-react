@@ -36,7 +36,7 @@ export default function ItemDetail({id, descripcion, echoen, imagen, marca, mate
         cantidadAgregada > 0 ? (
           <Link to="/Carrito">Ver Carrito</Link>
         ) : (
-          <ItemCount stock={stock} initial={0} onAdd={agregarCant}/>
+          <ItemCount stock={stock} initial={0} onAdd={agregarCant /* ! Seguir aca */}/>
         )
       }
     </div>

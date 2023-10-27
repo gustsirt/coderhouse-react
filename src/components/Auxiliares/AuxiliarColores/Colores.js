@@ -7,7 +7,7 @@ import AgregarIniciales from '../AgregarIniciales'
 export default function Colores() {
   return (
     <>
-      <AgregarIniciales/>
+    {/* <AgregarIniciales/> */}
       <div className='colores'>
         <div className='ccl1'>ccla1</div>
         <div className='ccl2'>ccla2</div>
