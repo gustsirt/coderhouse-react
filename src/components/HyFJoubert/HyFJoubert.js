@@ -49,7 +49,6 @@ export default function HyFJoubert(props) {
                 <button className="elementoDesplegable" onClick={setSubmenu1}>Marcas{submenu1 ? <BiCaretDown/>: <BiCaretRight/>}</button>
                 <ul className={"navAnidado " + (submenu1 ? "": "esconder")}>
                   <li className="navLi"><NavLink to="/Marca/CarolinaHerrera" onClick={setSubmenu1}>Carolina Herrera</NavLink></li>
-                  <li className="navLi"><NavLink to="/Marca/JuanitaJo" onClick={setSubmenu1}>Juanita Jo</NavLink></li>
                   <li className="navLi"><NavLink to="/Marca/Ernesto" onClick={setSubmenu1}>Ernesto</NavLink></li>
                 </ul>
               </li>

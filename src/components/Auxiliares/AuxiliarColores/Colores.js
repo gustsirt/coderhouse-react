@@ -1,8 +1,6 @@
 import React from 'react'
 import './colores.css'
-import AgregarIniciales from '../AgregarIniciales'
-
-
+//import AgregarIniciales from '../AgregarIniciales'
 
 export default function Colores() {
   return (
