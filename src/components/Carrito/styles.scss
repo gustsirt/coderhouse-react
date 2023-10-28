@@ -1,0 +1,26 @@
+@import "../variables";
+
+.carrito {
+  margin: 1em;
+  width: 80%;
+  background-color: $cosc1;
+
+  .elementos {
+    margin: 0.8em auto;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    background-color: $ccla1;
+
+    .renglon {
+      display: flex;
+
+    }
+  }
+}
+
+.carritoFooter{
+  h3 {
+    text-align: right;
+  }
+}

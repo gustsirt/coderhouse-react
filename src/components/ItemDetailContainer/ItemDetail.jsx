@@ -5,8 +5,6 @@ import { ContextCar } from "../../Context/ContextCar";
 export default function ItemDetail({item}) {
   const ttt = Object(item.tamaño); // auxiliar para obtener las medidas del producto
 
-  console.log(item);
-
   const { addItem } = useContext(ContextCar); // obtiene carrito
 
   const [cantidad, setCantidad] = useState(1);
