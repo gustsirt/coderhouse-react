@@ -30,7 +30,7 @@ export default function Carrito() {
           <div className='carritoFooter'>
             <h3>Total: {Intl.NumberFormat( "es-ar", {style: "currency", currency: "ARS"}).format(montoTotal())}</h3>
             <button onClick={() => clearItems()}> Limpiar Carrito </button>
-            <Link to="checkout">Checkout</Link>
+            <Link to="/Checkout">Finalizar Compra</Link>
           </div>
         </div>
       </>
