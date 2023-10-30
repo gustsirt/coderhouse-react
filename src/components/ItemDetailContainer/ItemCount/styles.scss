@@ -1,4 +1,4 @@
-@import "../../variables";
+@import "../../../Estilos/variables";
 
 .contador {
   display: flex;
@@ -8,11 +8,30 @@
   height: auto;
 
   .controles {
+    margin-bottom: 0.3em;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    button{
+      width: 30px;
+    }
   }
   p {
     color: $cnegro;
   }
+  .boton {
+    width: 150px;
+  }
+}
+button{
+  padding: 0.3em;
+  color: $cnegro;
+  background-color: $cosc3;
+  border-radius: 10px;
+  border-color: $cosc5;
+  font-weight: bolder;
+}
+button:active{
+  color: $cosc3;
+  background-color: $cnegro;
 }

@@ -1,11 +1,10 @@
 import React from "react";
-import "./styles.css";
 import Cards from "./Cards";
 
 export default function ItemList({products}) {
   
   return (
-    <div className="itemList">
+    <div className="contenedor--horizontal">
       {products.map ( elm => <Cards key={elm.id} {...elm} /> )}
     </div>
   );

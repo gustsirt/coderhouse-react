@@ -1,42 +1,141 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Viga&display=swap');
-@import './components/variables';
+@import './Estilos/variables';
+@import './Estilos/definiciones';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: $fuenteP, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: $ccla2;
+.tituloInterno{
+  color: $cosc7;
+  margin-bottom: 1em;
 }
 
-h1 {
-  font-family: $fuenteT, serif;
-  font-weight: normal;
-}
-h2, h3, h4 {
-  font-family: $fuenteH, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
-}
-a, a:hover{
-  text-decoration: none;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-#root {
+.contenedor{
   width: 100%;
+  padding: 1.5em;
+  margin: 0 auto;
+  display: flex;
+  background-color: $ccla1;
+}
+
+//------------------------
+.contenedor--horizontal {
+  @extend .contenedor;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .card {
+    min-width: 200px;
+    padding: 0.8em;
+    margin: 1em;
+    width: 20%;
+    border: 3px solid $cosc7;
+    border-radius: 30px;
+    color: $cosc7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      height: 30vh;
+    }
+  }
+}
+
+.contenedor--centrado {
+  @extend .contenedor;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  .item{
+    width: 60%;
+    border: 3px solid $cosc7;
+    border-radius: 30px;
+    color: $cosc7;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      max-height: 350px;
+      }
+
+    .itemDetail{
+      margin: 0.5em 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      p {
+        text-align: justify;
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .tablaCarrito{
+    margin: 0.8em auto;
+    width: 95%;
+    table-layout:auto ;
+    border-spacing: 1em;
+    background-color: $cosc1;
+
+    .renglon{
+      width: 90%;
+      margin: 0 auto;
+
+      img {
+        max-width: 4em;
+      }
+    }
+  }
+
+  .carritoFooter{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    h3 {
+      text-align: right;
+    }
+  }
+
+
+}
+
+.formulario {
+  margin: 1em;
   display: flex;
   flex-direction: column;
+  gap: .5rem;
   align-items: center;
+
+  input {
+    padding: .5rem;
+    width: 18rem;
+    border-radius: .5rem;
+    border: 2px solid black;
+}
+  input:focus {
+    outline: 0;
+    border: 2px solid $cosc5;
+    outline: 2px solid $cosc5;
+}
+
+}
+
+.linkA {
+  margin-top: 0.5em;
+  padding: 0.5em;
+  color: $cnegro;
+  background-color: $cosc3;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.linkA:hover {
+  color: $cosc3;
+  background-color: $cnegro;
 }

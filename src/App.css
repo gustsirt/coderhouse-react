@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Viga&display=swap");
+#root {
+  width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +11,11 @@
 
 body {
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: #faf2cc;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
@@ -29,9 +35,126 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-#root {
+.tituloInterno {
+  color: #504b36;
+  margin-bottom: 1em;
+}
+
+.contenedor, .contenedor--centrado, .contenedor--horizontal {
   width: 100%;
+  padding: 1.5em;
+  margin: 0 auto;
+  display: flex;
+  background-color: #f4e7af;
+}
+
+.contenedor--horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.contenedor--horizontal .card {
+  min-width: 200px;
+  padding: 0.8em;
+  margin: 1em;
+  width: 20%;
+  border: 3px solid #504b36;
+  border-radius: 30px;
+  color: #504b36;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+.contenedor--horizontal .card img {
+  max-width: 100%;
+  height: 30vh;
+}
+
+.contenedor--centrado {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.contenedor--centrado .item {
+  width: 60%;
+  border: 3px solid #504b36;
+  border-radius: 30px;
+  color: #504b36;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contenedor--centrado .item img {
+  max-width: 100%;
+  max-height: 350px;
+}
+.contenedor--centrado .item .itemDetail {
+  margin: 0.5em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contenedor--centrado .item .itemDetail p {
+  text-align: justify;
+}
+.contenedor--centrado .item .itemDetail span {
+  font-weight: bold;
+}
+.contenedor--centrado .tablaCarrito {
+  margin: 0.8em auto;
+  width: 95%;
+  table-layout: auto;
+  border-spacing: 1em;
+  background-color: #e0cd7c;
+}
+.contenedor--centrado .tablaCarrito .renglon {
+  width: 90%;
+  margin: 0 auto;
+}
+.contenedor--centrado .tablaCarrito .renglon img {
+  max-width: 4em;
+}
+.contenedor--centrado .carritoFooter {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.contenedor--centrado .carritoFooter h3 {
+  text-align: right;
+}
+
+.formulario {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+.formulario input {
+  padding: 0.5rem;
+  width: 18rem;
+  border-radius: 0.5rem;
+  border: 2px solid black;
+}
+.formulario input:focus {
+  outline: 0;
+  border: 2px solid #897c44;
+  outline: 2px solid #897c44;
+}
+
+.linkA {
+  margin-top: 0.5em;
+  padding: 0.5em;
+  color: black;
+  background-color: #c2ad52;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.linkA:hover {
+  color: #c2ad52;
+  background-color: black;
 }/*# sourceMappingURL=App.css.map */

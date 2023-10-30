@@ -9,14 +9,17 @@ import Detalle from "./Detalle";
 
 export default function Checkout() {
 
-  const {carrito, montoTotal, clearItems} = useContext(ContextCar)
+  // inicia Form y el SweetAlert (alertas)
   const { register, handleSubmit } = useForm();
+  const MySwal = withReactContent(Swal)
+
+    // variables propias se usa para armar el detalle
+  const {carrito, montoTotal, clearItems} = useContext(ContextCar)
   const [idpedido, setIdpedido] = useState("")
   const [compra, setCompra] = useState([])
   const [total, setTotal] = useState([])
 
-  const MySwal = withReactContent(Swal) // declaro variable para realizar bien la alerta
-
+  // Gestionadores de eventos formulario
   const comprar = (data) => {
     const pedido = {
       cliente: data,
@@ -24,17 +27,14 @@ export default function Checkout() {
       total: montoTotal()
     }
 
-    
     const pedidosRef = collection(db, 'pedidos')
-    
-    setIdpedido("Xm7pIWVd5iPUP5jfgkek")
-    setCompra(carrito)
-    setTotal(montoTotal())
-    /*addDoc(pedidosRef, pedido)
+    addDoc(pedidosRef, pedido)
     .then(doc => {
       setIdpedido(doc.id)
+      setCompra(carrito)
+      setTotal(montoTotal())
       clearItems()
-    })*/
+    })
   }
 
   const errorSubmit = () => {
@@ -45,6 +45,7 @@ export default function Checkout() {
     })
   } 
 
+  // Codigo Renderizado
   if (idpedido) {
     return (
         <Detalle idpedido={idpedido} data={compra} total={total}/>
@@ -53,20 +54,20 @@ export default function Checkout() {
 
   return (
 
-    <div>
+    <>
       <h2>Finalizar Compra</h2>
 
-        <form onSubmit={handleSubmit(comprar, errorSubmit)}>
+      <form className="formulario" onSubmit={handleSubmit(comprar, errorSubmit)}>
 
-            <input type="text" placeholder="Ingresá tu nombre" {...register("nombre", { required: true, pattern: /^[A-Za-z]+$/i})} />
-            <input type="text" placeholder="Ingresá tu apellido" {...register("apellido", { required: true, pattern: /^[A-Za-z]+$/i})} />
-            <input type="email" placeholder="Ingresá tu e-mail" {...register("email", { required: true})} />
-            <input type="phone" placeholder="Ingresá tu teléfono" {...register("telefono", { required: true})} />
+          <input type="text" placeholder="Ingresá tu nombre" {...register("nombre", { required: true, pattern: /^[A-Za-z]+$/i})} />
+          <input type="text" placeholder="Ingresá tu apellido" {...register("apellido", { required: true, pattern: /^[A-Za-z]+$/i})} />
+          <input type="email" placeholder="Ingresá tu e-mail" {...register("email", { required: true})} />
+          <input type="phone" placeholder="Ingresá tu teléfono" {...register("telefono", { required: true})} />
 
-            <button type="submit">Comprar</button>
+          <button type="submit">Comprar</button>
 
-        </form>
-    </div>
+      </form>
+    </>
 
   )
 }

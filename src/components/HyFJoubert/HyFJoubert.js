@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation} from "react-router-dom";
 import CartWidget from "./CartWidget/CartWidget";
 import { BiLogoLinkedin, BiLogoFacebook, BiLogoInstagram, BiLogoGmail, BiLogoWhatsapp, BiCaretRight, BiCaretDown } from "react-icons/bi";
@@ -7,6 +7,7 @@ import { NavLink, Link } from "react-router-dom";
 import useSubmenu from "./useSubmenu";
 
 export default function HyFJoubert(props) {
+  // variables propias
   const paginas = [
     {
       src: "/Productos",
@@ -19,8 +20,12 @@ export default function HyFJoubert(props) {
     {
       src: "/Colores",
       h1: "Auxiliar Colores"
+    },
+    {
+      src: "/Checkout",
+      h1: "Detalle de la Compra"
     }
-  ];
+  ];  
 
   // Ayuda a determinar en pagina se esta, con esta información se cambia el titulo
   let location = useLocation();
@@ -31,14 +36,12 @@ export default function HyFJoubert(props) {
   const [submenu1, setSubmenu1] = useSubmenu()
   const [submenu2, setSubmenu2] = useSubmenu()
 
+  // Codigo Renderizado
   return (
     <>
       <header className="header">
 
-        <Link to="/"><h1> Tienda Joubert {
-          locationBase === '/Marca' ? (<span className="h1extra"> . {location.pathname.split('/')[2]} </span>) : (
-            currentPagina ? (<span className="h1extra"> . {currentPagina.h1}</span>) : "")
-        }</h1></Link>
+        <Link to="/"><h1> Tienda Joubert <span className="h1extra"> {currentPagina ? ("."+currentPagina.h1) : ""} </span></h1></Link>
 
         <div className="navB">
           <nav className="nav">

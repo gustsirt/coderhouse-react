@@ -6,10 +6,31 @@
   height: auto;
 }
 .contador .controles {
+  margin-bottom: 0.3em;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
+.contador .controles button {
+  width: 30px;
+}
 .contador p {
   color: black;
+}
+.contador .boton {
+  width: 150px;
+}
+
+button {
+  padding: 0.3em;
+  color: black;
+  background-color: #c2ad52;
+  border-radius: 10px;
+  border-color: #897c44;
+  font-weight: bolder;
+}
+
+button:active {
+  color: #c2ad52;
+  background-color: black;
 }/*# sourceMappingURL=styles.css.map */
