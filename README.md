@@ -1,4 +1,4 @@
-# Primera pre - entrega - Crea tu landing
+# REACT JAVAS SCRIPT - CODERHOUSE
 ## Alumno: Sirtori Gustavo
 
 ---
@@ -27,8 +27,8 @@ Es el componente donde se ubica el header y el footer
 
 <h3 style="color: blue">ESTILOS</h3>
 
-Se centrara todo en un archivo Scss ligado a App.scss incluido en App.
-Se podria generar estilos mas apropados en cada componente pero eso lo hace mas confuso y en general una pagina web tiene un estilo unificado salvo elementos muy especificos donde si se requerria css adicional.
+Se centrará todo en un archivo Scss ligado a App.scss incluido en App.
+Se podria generar estilos mas apropados en cada componente, pero eso lo hace mas confuso y en general una pagina web tiene un estilo unificado salvo elementos muy especificos donde si se requerria css adicional.
 
 POR EXCEPCION: HyJJoubert - Header y Footer - Si tiene css personalizado.
 
@@ -80,7 +80,7 @@ Es el componente que muestra 1 producto detalladamente
 * Posee 3 componentes anidados
 
  1. ***ItemDetailContainer***
-    * Concentra la logica del datos a mostrar
+    * Concentra la logica de datos a mostrar
     * Muestra el titulo
     * Llama a ***ItemDetail*** (le pasa el prodcuto)
  2. ***ItemDetail***
