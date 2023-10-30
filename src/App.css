@@ -120,7 +120,7 @@ code {
   width: 90%;
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
 }
 .contenedor--centrado .carritoFooter h3 {
   text-align: right;

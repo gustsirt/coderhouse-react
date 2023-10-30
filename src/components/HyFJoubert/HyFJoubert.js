@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { useLocation} from "react-router-dom";
 import CartWidget from "./CartWidget/CartWidget";
 import { BiLogoLinkedin, BiLogoFacebook, BiLogoInstagram, BiLogoGmail, BiLogoWhatsapp, BiCaretRight, BiCaretDown } from "react-icons/bi";
@@ -46,7 +45,6 @@ export default function HyFJoubert(props) {
         <div className="navB">
           <nav className="nav">
             <ul>
-              <li className="navLi"><NavLink to="/">Inicio</NavLink></li>
               <li className="navLi"><NavLink to="/Productos">Productos</NavLink></li>
               <li className="despLi">
                 <button className="elementoDesplegable" onClick={setSubmenu1}>Marcas{submenu1 ? <BiCaretDown/>: <BiCaretRight/>}</button>
@@ -63,7 +61,7 @@ export default function HyFJoubert(props) {
                   <li className="navLi"><NavLink to="/Tipo/Cartera" onClick={setSubmenu2}>Cartera</NavLink></li>
                 </ul>
               </li>
-              <li className="navLi"><NavLink to="/Colores">Colores</NavLink></li>
+              {/* <li className="navLi"><NavLink to="/Colores">Colores</NavLink></li> */}
             </ul>
           </nav>
           <CartWidget />

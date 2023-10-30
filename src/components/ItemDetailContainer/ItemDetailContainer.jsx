@@ -7,13 +7,21 @@ export default function ItemDetailContainer() {
 
   // variables propias
   const [item, setItem] = useState(null)
+  const [error, setError] = useState(null)
   const {id} = useParams()
 
   // Gestionadores de cambio
   useEffect( () => {
     getProductById(id)
-    .then (res => setItem(res))
+    .then (res => {
+      setItem(res)
+      verSiError(res)
+    } )
   }, [id]);
+
+  const verSiError = (res) => {
+    !res.titulo ? setError("Su producto no se encuentra") : setError(null)
+  }
 
   // Codigo Renderizado
   return (
@@ -21,7 +29,10 @@ export default function ItemDetailContainer() {
     <>
       <div className='contenedor--centrado'>  
         <h2>{item.titulo}</h2>
-        {item? <ItemDetail item={item}/> : "Cargando"}
+        { item ? (
+          error ? error :
+          <ItemDetail item={item}/>
+        ) : "Cargando"}
       </div>
     </>)
   )
